@@ -2952,16 +2952,15 @@ nav button:active {
 }
 .nav-links {
     width: 80%;
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
 }
 .nav-icon {
-    display: none;
-    grid-gap: 5px;
-    grid-template-columns: auto;
+    display: inline-grid;
+    grid-gap: 4px;
     padding: 16px 0;
-    height: 10px;
+    height: 16px;
     cursor: pointer;
     transition: all 0.3s;
 }
