@@ -582,6 +582,17 @@ object-fit: cover;
     background-color: rgba(0,0,0,0.8);
 }
 
+.form-container {
+    max-width: 90%; /* Ensures form adjusts based on screen width */
+    width: 600px; /* Default maximum width */
+    margin: 20px auto; /* Provides margin for smaller screens */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visual depth */
+    background-color: #fff;
+}
+
 .footer {
             position: static ;
             text-align: center;
