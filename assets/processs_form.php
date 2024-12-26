@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = $_POST['message'];
 
     // Send an email (example)
-    $to = "your-email@example.com";
+    $to = "contact@astndsgn.com"; "me@imdanielaustin.com";
     $headers = "From: $email";
     $body = "New Project Inquiry:\n\nName: $first_name $last_name\nBusiness: $business_name\nWebsite: $business_website\nEmail: $email\nBudget: $budget\nTime Allowance: $time_allowance\nPackage: $package_options\nSubject: $subject\nMessage: $message";
 
