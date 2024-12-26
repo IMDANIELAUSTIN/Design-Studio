@@ -584,14 +584,48 @@ object-fit: cover;
 
 .form-container {
     max-width: 90%; /* Ensures form adjusts based on screen width */
-    width: 600px; /* Default maximum width */
-    margin: 20px auto; /* Provides margin for smaller screens */
-    padding: 20px;
-    border: 1px solid #ccc;
+    width: 800px; /* Default maximum width */
+    margin: 24px auto; /* Provides margin for smaller screens */
+    padding: 36px;
+    border: 2px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visual depth */
-    background-color: #fff;
+    background-color: #ffffff;
 }
+
+        .form-container h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 8px;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .form-group button {
+            display: flex;
+            background-color: #000000;
+            color: white;
+            padding: 16px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #000000;
+        }
 
 .footer {
             position: static ;
@@ -4278,7 +4312,40 @@ button:active {
   background: #1e1e1e;
   transition: all .4s;
   overflow-y: auto;
+    z-index: 9999;
 }
+        .form-container {
+        width: auto;
+        margin: auto;
+        padding: 8px;
+        border-radius: 4px;
+    }
+
+    .form-container h2 {
+        font-size: 1.2em; /* Slightly smaller heading for compact view */
+        text-align: center;
+    }
+    
+            .form-group {
+            margin-bottom: 8px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: auto;
+            margin: auto;
+            padding: 8px auto;
+            border: 2px solid #ccc;
+            border-radius: 4px;
+        }
+            .form-group textarea {
+            resize: vertical;
+        }
+    
 .footer {
         position: static;
         font-size: 10pt;
