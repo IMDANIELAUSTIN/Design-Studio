@@ -582,51 +582,6 @@ object-fit: cover;
     background-color: rgba(0,0,0,0.8);
 }
 
-.form-container {
-    max-width: 90%; /* Ensures form adjusts based on screen width */
-    width: 800px; /* Default maximum width */
-    margin: 24px auto; /* Provides margin for smaller screens */
-    padding: 36px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visual depth */
-    background-color: #ffffff;
-}
-
-        .form-container h2 {
-            text-align: center;
-        }
-        .form-group {
-            margin-bottom: 15px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-        }
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: 100%;
-            padding: 8px;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-        }
-        .form-group textarea {
-            resize: vertical;
-        }
-        .form-group button {
-            display: flex;
-            background-color: #000000;
-            color: white;
-            padding: 16px 24px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-        .form-group button:hover {
-            background-color: #000000;
-        }
-
 .footer {
             position: static ;
             text-align: center;
@@ -2451,7 +2406,7 @@ nav button:active {
 
 button {
     background-color: #ffffff;
-    display: inline;
+    display: inline-flex;
     flex: 1 1 auto;
     font-size: 10pt;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;    
@@ -2466,7 +2421,7 @@ button {
 
 button:hover {
     background-color: #ffffff;
-    display: inline;
+    display: inline-flex;
     flex: 1 1 auto;
     font-size: 10pt;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;    
@@ -2478,12 +2433,11 @@ button:hover {
     border-radius: 16px;
     font-weight: bolder ;
     margin: 0;
-
 }
 
 button:active {
     background-color: #ffffff;
-    display: inline;
+    display: inline-flex;
     flex: 1 1 auto;
     font-size: 10pt;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;    
@@ -2922,11 +2876,10 @@ nav button:active {
 }
 
 .nav-content {
-    max-width: 1024px;
+    max-width: 100vh;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 auto;
     display: flex;
-    justify-content: space-between;
     font-size: 12pt;
     line-height: 44px;
     text-decoration: none;
@@ -2934,11 +2887,10 @@ nav button:active {
     color: #1e1e1e;
 }
 .nav-content a {
-    max-width: 1024px;
+    max-width: auto;
     margin: 0 auto;
-    padding: 0 20px;
-    display: flex;
-    justify-content: space-between;
+    padding: 0 auto;
+    display: inline-flex;
     font-size: 12pt;
     line-height: 44px;
     text-decoration: none;
@@ -2951,16 +2903,18 @@ nav button:active {
     opacity: 0.7;
 }
 .nav-links {
-    width: 80%;
-    display: inline-flex;
+    max-width: 100%;
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-top: 16px auto;
 }
 .nav-icon {
-    display: inline-grid;
-    grid-gap: 4px;
+    display: none;
+    grid-gap: 5px;
+    grid-template-columns: auto;
     padding: 16px 0;
-    height: 16px;
+    height: 10px;
     cursor: pointer;
     transition: all 0.3s;
 }
@@ -3230,7 +3184,6 @@ nav button:active {
     height: 10px;
     cursor: pointer;
     transition: all 0.3s;
-    z-index: 9999;
 }
 .bar {
     height: 4px;
@@ -3258,7 +3211,7 @@ nav button:active {
         flex-direction: column;
         justify-content: flex-start;
         transition: height 2s cubic-bezier(0.19, 1, 0.22, 1),
-        background-color 0.3s;
+            background-color 0.3s;
     }
     .show .nav-links {
         position: absolute ;
@@ -3609,7 +3562,7 @@ nav button:active {
         flex-direction: column;
         justify-content: flex-start;
         transition: height 2s cubic-bezier(0.19, 1, 0.22, 1),
-        background-color 0.3s;
+            background-color 0.3s;
     }
     .show .nav-links {
         height: 100%;
@@ -3637,7 +3590,6 @@ nav button:active {
     height: 10px;
     cursor: pointer;
     transition: all 0.3s;
-    z-index: 9999;
 }
 .bar {
     height: 4px;
@@ -3989,7 +3941,6 @@ nav button:active {
     height: 10px;
     cursor: pointer;
     transition: all 0.3s;
-    z-index: 9999;
 }
 .bar {
     height: 4px;
@@ -4311,40 +4262,7 @@ button:active {
   background: #1e1e1e;
   transition: all .4s;
   overflow-y: auto;
-    z-index: 9999;
 }
-        .form-container {
-        width: auto;
-        margin: auto;
-        padding: 8px;
-        border-radius: 4px;
-    }
-
-    .form-container h2 {
-        font-size: 1.2em; /* Slightly smaller heading for compact view */
-        text-align: center;
-    }
-    
-            .form-group {
-            margin-bottom: 8px;
-        }
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-        }
-        .form-group input,
-        .form-group textarea,
-        .form-group select {
-            width: auto;
-            margin: auto;
-            padding: 8px auto;
-            border: 2px solid #ccc;
-            border-radius: 4px;
-        }
-            .form-group textarea {
-            resize: vertical;
-        }
-    
 .footer {
         position: static;
         font-size: 10pt;
