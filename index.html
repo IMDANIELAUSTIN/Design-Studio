@@ -86,14 +86,13 @@ My Deliverables: Brand Guidelines (Print + Digital), Branded Stationary, Visual 
        <div class="tile">
     <a href="#THE-BITCOIN-LAYER-INTERNSHIP">
         <img src="/images/TBL Tile Cover.png"
-             srcset="/images/TBL Tile Cover.png 1x, /images/TBL Tile Cover@2x.png 2x"
-             alt="The Bitcoin Layer">
+             srcset="/images/TBL Tile Cover.png 1x, /images/TBL Tile Cover@2x.png 2x" alt="The Bitcoin Layer">
     </a>
     <div id="THE-BITCOIN-LAYER-INTERNSHIP" class="modal">
         <div class="modal__content">
             <h1>THE BITCOIN LAYER INTERNSHIP</h1>
             <pre>ROLE: CONTENT MANAGER & DESIGNER</pre>
-            <pre>DURATION: APPROX. 12 WEEKS</pre>  
+            <pre>DURATION: APPROX. 12 WEEKS</pre>
             <pre>
 Project: Contributed as a Content Manager and Designer, focusing on design strategy,
 content creation, and visual storytelling for The Bitcoin Layer.
@@ -101,16 +100,17 @@ Responsibilities: Content Strategy, Visual Design, and Market Research.
 Deliverables: Social Media Assets, Marketing Materials, Presentation Decks.
             </pre>
 
+            <!-- Image Gallery -->
             <div class="gallery">
                 <img src="/images/TBL Tile Cover.png" alt="The Bitcoin Layer Internship" class="gallery-item">
                 <img src="/images/TBL Process 1.png" alt="Work Example 1" class="gallery-item">
                 <img src="/images/TBL Process 2.png" alt="Work Example 2" class="gallery-item">
             </div>
 
-            <!-- Lightbox for images -->
+            <!-- Lightbox for Images -->
             <div id="lightbox-TBL" class="lightbox">
                 <span class="close">×</span>
-                <img class="lightbox-content" id="lightbox-img">
+                <img class="lightbox-content" id="lightbox-img" src="" alt="">
                 <div class="caption" id="caption"></div>
                 <a class="prev">❮</a>
                 <a class="next">❯</a>
@@ -422,6 +422,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
         window.filterPosts = filterPosts; // Expose the function to global scope if needed
     });
+
+	document.addEventListener('DOMContentLoaded', () => {
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('lightbox-TBL');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const caption = document.getElementById('caption');
+    const closeBtn = document.querySelector('.lightbox .close');
+    const prevBtn = document.querySelector('.lightbox .prev');
+    const nextBtn = document.querySelector('.lightbox .next');
+
+    let currentIndex = 0;
+
+    function showImage(index) {
+        const selectedItem = galleryItems[index];
+        lightboxImg.src = selectedItem.src;
+        caption.innerText = selectedItem.alt;
+        currentIndex = index;
+    }
+
+    galleryItems.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            lightbox.style.display = 'block';
+            showImage(index);
+        });
+    });
+
+    closeBtn.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex > 0) ? currentIndex - 1 : galleryItems.length - 1;
+        showImage(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex < galleryItems.length - 1) ? currentIndex + 1 : 0;
+        showImage(currentIndex);
+    });
+});
 </script>
 <script src="scripts.js"></script>
 </body>
