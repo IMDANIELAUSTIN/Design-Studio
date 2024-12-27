@@ -35,8 +35,6 @@
             <a href="/writings"><button>WRITINGS</button></a>
             <a href="/appointment"><button>BOOK CONSULTATION</button></a>
             <a><button id="copyEmailBtn">EMAIL ME</button></a>
-
-<!-- Hidden input to hold the email address -->
 <input type="text" value="contact@astndsgn.com" id="emailAddress" style="position: absolute; left: -9999px;">
         </div>
     </div>
@@ -384,15 +382,26 @@ document.addEventListener("DOMContentLoaded", function () {
     const emailAddress = document.getElementById('emailAddress');
 
     if (copyEmailBtn && emailAddress) {
-        copyEmailBtn.addEventListener('click', async function () {
-            try {
-                await navigator.clipboard.writeText(emailAddress.value);
-                alert('Copied the email: ' + emailAddress.value);
-            } catch (err) {
-                console.error('Failed to copy email: ', err);
-                alert('Failed to copy email. Please try manually.');
+        copyEmailBtn.addEventListener('click', function () {
+            const email = emailAddress.value;
+            if (navigator.clipboard && window.isSecureContext) {
+                navigator.clipboard.writeText(email).then(() => {
+                    alert('Copied the email: ' + email);
+                }).catch(err => {
+                    console.error('Failed to copy email: ', err);
+                    alert('Failed to copy email. Please try manually.');
+                });
+            } else {
+                // Fallback for older browsers
+                emailAddress.style.position = 'absolute';
+                emailAddress.style.left = '-9999px';
+                emailAddress.select();
+                document.execCommand('copy');
+                alert('Copied the email: ' + email);
             }
         });
+    } else {
+        console.warn('Copy Email Button or Email Address Input not found');
     }
 
     // Navigation toggle logic
