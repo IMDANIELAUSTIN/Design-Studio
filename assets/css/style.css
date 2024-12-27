@@ -269,7 +269,65 @@ nav button:active {
     border-radius: 16px;
     font-weight: bolder ;
         margin: 0;
+}
 
+.form-container {
+    max-width: 100%; /* Ensures responsiveness on larger screens */
+    width: 800px; /* Default maximum width */
+    margin: 20px auto; /* Centers form on the page */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Consistent spacing between form fields */
+}
+
+/* Form Inputs and Labels */
+.form-container label {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-container textarea {
+    resize: vertical;
+}
+
+.form-container button {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-container button:hover {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 button {
@@ -818,6 +876,65 @@ a:any-link {
     font-weight: bolder;
 }
 
+.form-container {
+    max-width: 100%; /* Ensures responsiveness on larger screens */
+    width: 800px; /* Default maximum width */
+    margin: 20px auto; /* Centers form on the page */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Consistent spacing between form fields */
+}
+
+/* Form Inputs and Labels */
+.form-container label {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-container textarea {
+    resize: vertical;
+}
+
+.form-container button {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-container button:hover {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
 button {
             background-color: #ffffff;
             display: inline-flex;
@@ -1190,6 +1307,65 @@ a:any-link {
     font-weight: bolder;
 }
 
+.form-container {
+    max-width: 100%; /* Ensures responsiveness on larger screens */
+    width: 800px; /* Default maximum width */
+    margin: 20px auto; /* Centers form on the page */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Consistent spacing between form fields */
+}
+
+/* Form Inputs and Labels */
+.form-container label {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-container textarea {
+    resize: vertical;
+}
+
+.form-container button {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-container button:hover {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
 button {
             background-color: #ffffff;
             display: inline-flex;
@@ -1231,7 +1407,17 @@ button:active {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;     height: 22pt;
     max-width: 140pt;
 }
-    
+    .form-container {
+        width: 95%;
+        padding: 16px;
+        margin: 8px auto;
+    }
+
+    .form-container button {
+        font-size: 13px;
+        padding: 8px 14px;
+    }
+}    
 .tile-container {
   display: flex;
   flex-wrap: wrap;
@@ -1565,6 +1751,65 @@ a:any-link {
     max-width: 100;
 }
 
+.form-container {
+    max-width: 100%; /* Ensures responsiveness on larger screens */
+    width: 800px; /* Default maximum width */
+    margin: 20px auto; /* Centers form on the page */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Consistent spacing between form fields */
+}
+
+/* Form Inputs and Labels */
+.form-container label {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-container textarea {
+    resize: vertical;
+}
+
+.form-container button {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-container button:hover {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
 button {
             background-color: #ffffff;
             display: flex;
@@ -1606,6 +1851,23 @@ button:active {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;     height: 22pt;
     max-width: 140pt;
 }
+
+    .form-container {
+        width: 100%;
+        margin: 5px;
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+    .form-container h2 {
+        font-size: 1.2em;
+        text-align: center;
+    }
+
+    .form-container button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
 .tile-container {
   display: flex;
   flex-wrap: wrap;
@@ -2026,6 +2288,64 @@ button:active {
     border-radius: 16px;
     font-weight: bolder ;
     margin: 0;
+}
+.form-container {
+    max-width: 100%; /* Ensures responsiveness on larger screens */
+    width: 800px; /* Default maximum width */
+    margin: 20px auto; /* Centers form on the page */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Consistent spacing between form fields */
+}
+
+/* Form Inputs and Labels */
+.form-container label {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-container textarea {
+    resize: vertical;
+}
+
+.form-container button {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-container button:hover {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 .tile-container {
