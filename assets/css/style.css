@@ -376,7 +376,16 @@ button:active {
     border-radius: 16px;
     font-weight: bolder ;
     margin: 0;
+}
 
+#myBtn {
+    padding: 16px;
+    margin: 16px;
+    bottom: 16px;
+    right: 16px;
+    position: fixed;
+    display: inline-flex;
+    z-index: 1000;
 }
 
 .tile-container {
@@ -4602,6 +4611,7 @@ button:active {
   transition: all .4s;
   overflow-y: auto;
 }
+    
 .footer {
         position: static;
         font-size: 10pt;
