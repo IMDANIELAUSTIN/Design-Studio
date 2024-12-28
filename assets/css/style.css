@@ -154,7 +154,6 @@ nav button:active {
     border-radius: 16px;
     font-weight: bolder ;
         margin: 0;
-
 }
 
 .nav-content {
@@ -530,6 +529,21 @@ button:active {
         text-decoration: none;
     }
 
+.modal-close-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: transparent;
+    border: none;
+    font-size: 16px;
+    color: #000000;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.modal-close-btn:hover {
+    color: #000000;
+}
 .gallery {
     display: flex;
     justify-content: center;
