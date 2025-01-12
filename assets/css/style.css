@@ -3253,7 +3253,7 @@ nav button:active {
     justify-content: space-between;
 }
 .nav-icon {
-    display: none;
+    display: inline-grid;
     grid-gap: 5px;
     grid-template-columns: auto;
     padding: 16px 0;
